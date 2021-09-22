@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vvi.blog.dao.CommentMapper">
+
+    <!--针对文章回复-->
+    <insert id="insertComment" parameterType="com.vvi.blog.bean.Comment">
+      insert into comment
+        (article_id ,user_id ,content ,create_time)
+      values
+        (#{article_id} ,#{user_id} ,#{content} ,#{create_time})
+    </insert>
+
+    <!--针对父节点回复-->
+    <insert id="insertCommentSon" parameterType="com.vvi.blog.bean.Comment">
+      insert into comment
+        (article_id ,user_id ,parent_id ,content ,create_time)
+      values
+        (#{article_id} ,#{user_id} ,#{parent_id} ,#{content} ,#{create_time})
+    </insert>
+
+    <!--针对二级节点回复-->
+    <insert id="insertCommentGSon" parameterType="com.vvi.blog.bean.Comment">
+      insert into comment
+        (article_id ,user_id ,parent_id ,reply_id ,content ,create_time)
+      values
+        (#{article_id} ,#{user_id} ,#{parent_id} ,#{reply_id} ,#{content} ,#{create_time})
+    </insert>
+
+
+    <select id="selectCommentByArticleId" parameterType="java.lang.Integer" resultType="com.vvi.blog.bean.Comment">
+        select
+          a.comment_id ,a.article_id ,a.user_id ,a.parent_id ,a.reply_id ,
+          a.content ,a.create_time ,b.username ,b.image_url
+        from
+          comment as a, users as b
+        where
+          a.article_id=#{article_id} and a.user_id=b.user_id order by a.create_time
+    </select>
+
+    <!--<select id="selectByYear" parameterType="java.lang.String" resultType="com.vvi.blog.bean.Article">
+        select article_id,title,create_time from article where DATE_FORMAT(create_time,"%Y")=#{YEAR}
+    </select>&ndash;&gt;-->
+
+    <select id="selectCommentNum" parameterType="java.lang.Integer" resultType="java.lang.String">
+        select count(*) from comment where article_id = #{article_id}
+    </select>
+
+    <!--评论列表-->
+    <select id="selectComments" resultType="com.vvi.blog.bean.Comment">
+        select
+            comment.comment_id, article.title, comment.parent_id, comment.content, users.username
+        from
+            comment,users,article
+        WHERE
+            users.user_id=comment.user_id
+            and
+            article.article_id=comment.article_id
+        order by
+            comment.comment_id
+    </select>
+
+    <delete id="deleteComment" parameterType="java.lang.Integer">
+        delete from comment where comment_id=#{comment_id} or parent_id=#{comment_id}
+    </delete>
+
+</mapper>

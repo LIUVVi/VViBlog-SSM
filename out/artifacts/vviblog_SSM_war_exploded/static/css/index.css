@@ -1,0 +1,406 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.main{
+    padding: 10px;
+    margin: 0 auto;
+    width: 1000px;
+    height: auto;
+}
+.ar{
+    margin-top: 50px;
+}
+.ar-summary{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+}
+.ar-info{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+.ar-info-text{
+    float: left;
+    width: 150px;
+}
+.more{
+    margin-top: 8px;
+    float: right;
+    width: 150px;
+    height: 36px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    line-height: 36px;
+    text-align: center;
+
+}
+.more>a{
+    color: white;
+}
+.mr-2{
+    margin-right: 5px;
+}
+
+/*====================================
+分页
+====================================*/
+.pagination{
+    margin: 30px auto;
+    display: table;
+    text-align:center;
+}
+.page-item{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    border:2px solid #9b9b9b;
+    float: left;
+    margin-left: 20px;
+}
+.page-link{
+    display: block;
+}
+.disabled{
+    pointer-events: none;
+    border:2px solid #5c5c5c;
+
+}
+.disabled>a{
+    color: #5c5c5c;
+}
+.page-active{
+    background-color: #2f2f2f;
+}
+.page-active>a{
+    color: white;
+}
+
+@media only screen and (max-width:340px) {
+    .main{
+        padding: 0;
+        margin: 0 auto;
+        width: 95%;
+        height: auto;
+    }
+
+    .ar{
+        margin-top: 20px;
+    }
+    .ar>h1{
+        font-size: 1.7rem;
+    }
+    .ar-summary{
+        margin-top: 5px;
+        width: 100%;
+        height: auto;
+        font-size: 0.8rem;
+    }
+
+    .ar-info{
+        margin-top: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .ar-info-text:first-child{
+        display: none;
+    }
+    .ar-info-text{
+        float: left;
+        width: auto;
+        margin-left: 10px;
+        font-size: 0.8rem;
+    }
+    .more{
+        margin-top: 12px;
+        float: right;
+        width: 70px;
+        height: 30px;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        border-radius: 20px;
+        line-height: 30px;
+        text-align: center;
+        margin-right: 10px;
+        font-size: 0.8rem;
+
+    }
+    .more>a{
+        color: white;
+    }
+    .mr-2{
+        margin-right: 5px;
+    }
+
+    /*====================================
+    分页
+    ====================================*/
+    .pagination{
+        margin: 30px auto;
+        display: table;
+        text-align:center;
+        background-color: #ffffff;
+        box-shadow: 3px 3px 3px 3px silver;
+        border-radius: 15px;
+    }
+    .page-item{
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        border-radius: 0;
+        border:0;
+        float: left;
+        margin-left: 0;
+    }
+    .disabled{
+        pointer-events: none;
+        border:none;
+
+    }
+    .disabled>a{
+        color: #5c5c5c;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .main{
+        padding: 0;
+        margin: 0 auto;
+        width: 95%;
+        height: auto;
+    }
+
+    .ar{
+        margin-top: 20px;
+    }
+    .ar>h1{
+        font-size: 1.7rem;
+    }
+    .ar-summary{
+        margin-top: 5px;
+        width: 100%;
+        height: auto;
+        font-size: 0.8rem;
+    }
+    .ar-info{
+        margin-top: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .ar-info-text{
+        float: left;
+        width: auto;
+        margin-left: 10px;
+        font-size: 0.8rem;
+    }
+    .more{
+        margin-top: 12px;
+        float: right;
+        width: 70px;
+        height: 30px;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        border-radius: 20px;
+        line-height: 30px;
+        text-align: center;
+        margin-right: 10px;
+        font-size: 0.8rem;
+
+    }
+    .more>a{
+        color: white;
+    }
+    .mr-2{
+        margin-right: 5px;
+    }
+
+    /*====================================
+    分页
+    ====================================*/
+    .pagination{
+        margin: 30px auto;
+        display: table;
+        text-align:center;
+        background-color: #ffffff;
+        box-shadow: 3px 3px 3px 3px silver;
+        border-radius: 15px;
+    }
+    .page-item{
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        border-radius: 0;
+        border:0;
+        float: left;
+        margin-left: 0;
+
+    }
+    .disabled{
+        pointer-events: none;
+        border:none;
+
+    }
+    .disabled>a{
+        color: #5c5c5c;
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width:720px) {
+    .main{
+        padding: 10px;
+        margin: 0 auto;
+        width: 95%;
+        height: auto;
+    }
+
+    .ar{
+        margin-top: 15px;
+    }
+    .ar>h1{
+        font-size: 1.8rem;
+    }
+    .ar-summary{
+        margin-top: 5px;
+        width: 100%;
+        height: auto;
+        font-size: 0.95rem;
+    }
+    .ar-info{
+        margin-top: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .ar-info-text{
+        float: left;
+        width: auto;
+        margin-left: 10px;
+        font-size: 0.8rem;
+    }
+    .more{
+        margin-top: 12px;
+        float: right;
+        width: 100px;
+        height: 30px;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        border-radius: 20px;
+        line-height: 30px;
+        text-align: center;
+        margin-right: 10px;
+        font-size: 1rem;
+
+    }
+    .more>a{
+        color: white;
+    }
+    .mr-2{
+        margin-right: 5px;
+    }
+
+    /*====================================
+    分页
+    ====================================*/
+    .pagination{
+        margin: 30px auto;
+        display: table;
+        text-align:center;
+        background-color: #ffffff;
+        box-shadow: 3px 3px 3px 3px silver;
+        border-radius: 25px;
+    }
+    .page-item{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 0;
+        border:0;
+        float: left;
+        margin-left: 0;
+
+    }
+    .disabled{
+        pointer-events: none;
+        border:none;
+
+    }
+    .disabled>a{
+        color: #5c5c5c;
+    }
+}
+
+@media only screen and (min-width: 721px) and (max-width:1030px) {
+    .main{
+        padding: 10px;
+        margin: 0 auto;
+        width: 95%;
+        height: auto;
+    }
+
+    .ar{
+        margin-top: 15px;
+    }
+    .ar>h1{
+        font-size: 1.8rem;
+    }
+    .ar-summary{
+        margin-top: 5px;
+        width: 100%;
+        height: auto;
+        font-size: 0.95rem;
+    }
+    .ar-info{
+        margin-top: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .ar-info-text{
+        float: left;
+        width: auto;
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+    .more{
+        margin-top: 12px;
+        float: right;
+        width: 100px;
+        height: 30px;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        border-radius: 20px;
+        line-height: 30px;
+        text-align: center;
+        margin-right: 10px;
+        font-size: 1rem;
+
+    }
+    .more>a{
+        color: white;
+    }
+    .mr-2{
+        margin-right: 5px;
+    }
+
+    /*====================================
+    分页
+    ====================================*/
+    .page-item{
+        margin-left: 18px;
+    }
+}
+
+

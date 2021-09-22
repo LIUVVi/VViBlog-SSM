@@ -1,0 +1,132 @@
+html{
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.head{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.aside{
+    width: 280px;
+    height: 100%;
+    background-color: #333333;
+    text-align: center;
+    float: left;
+    margin-right: -100%;
+}
+.top-box{
+    width: 100%;
+    height: 260px;
+    background-color: #424242;
+
+}
+.head-box{
+    position: relative;
+    margin: 0 auto;
+    top: 70px;
+    padding: 5px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3);
+}
+.head-box>img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.sing-out{
+    position: relative;
+    top: 90px;
+    color: white;
+    text-decoration: none;
+}
+.sing-out:hover{
+    color: #e1e1e1;
+}
+.menu-box{
+    width: 100%;
+    height: auto;
+    color: white;
+}
+.menu-box a{
+    text-decoration: none;
+    color: white;
+}
+.menu-box a:hover{
+    color: #e1e1e1;
+}
+.menu-box>li{
+    margin-top: 10px;
+    height: auto;
+
+    width: 100%;
+    line-height: 35px;
+
+    transition: all ease 3s;
+}
+
+.son-menu-box{
+    height: auto;
+    overflow: hidden;
+}
+.son-menu-box>li{
+    font-size: 0.8rem;
+}
+.main{
+    margin-left: 280px;
+    height: auto;
+}
+.tabbable{
+    width: 100%;
+    height: 50px;
+}
+
+
+.mnav{
+    width: auto;
+}
+.mnav>li{
+    padding: 10px;
+    float: left;
+    width: 162px;
+    height: 50px;
+    line-height: 30px;
+    border-left: 1px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+}
+.mnav>li a{
+    color: #1b1e21;
+    text-decoration: none;
+}
+.tab-content{
+    height: 880px
+}
+.tab-content > div{
+    display: none;
+}
+.tab-content >.active{
+    display: block;
+}
+#myTab>li{
+    display: none;
+}
+#myTab>.active{
+    display: block;
+    border-bottom: none;
+}
+.fa-window-close{
+    cursor: pointer;
+}
+.fa-window-close:hover{
+    color: #d70000;
+}

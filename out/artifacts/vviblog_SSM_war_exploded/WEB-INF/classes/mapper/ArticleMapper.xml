@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vvi.blog.dao.ArticleMapper">
+    <select id="selectAll" resultType="com.vvi.blog.bean.Article">
+        select * from article order by create_time desc
+    </select>
+    <insert id="insertArticle" parameterType="com.vvi.blog.bean.Article">
+        insert into article
+          (title ,author ,tag ,summary ,create_time ,update_time ,content)
+        values (#{title} ,#{author} ,#{tag} ,#{summary} ,#{create_time} ,#{update_time} ,#{content})
+    </insert>
+    <delete id="deleteArticleById" parameterType="java.lang.Integer">
+        delete from article where article_id = #{id}
+    </delete>
+
+    <select id="selectArticleById" parameterType="java.lang.Integer" resultType="com.vvi.blog.bean.Article">
+        select * from article where article_id=#{id}
+    </select>
+
+
+    <!--查询上一篇文章-->
+    <select id="selectPrevArticleByCreateTime" parameterType="java.lang.String" resultType="com.vvi.blog.bean.Article">
+        select article_id ,title ,create_time
+        from (select article_id ,title ,create_time from article as a order by a.create_time asc) as b
+        where create_time&gt;#{create_time} limit 1
+
+    </select>
+
+    <!--查询下一篇文章-->
+    <select id="selectNextArticleByCreateTime" parameterType="java.lang.String" resultType="com.vvi.blog.bean.Article">
+        select article_id ,title ,create_time
+        from (select article_id ,title ,create_time from article as a order by a.create_time desc) as b
+        where create_time&lt;#{create_time} limit 1
+    </select>
+
+    <update id="updateArticle" parameterType="com.vvi.blog.bean.Article">
+        update article
+          set title=#{title} ,author=#{author} ,tag=#{tag} ,summary=#{summary} ,
+              update_time=#{update_time} ,content=#{content}
+        where article_id=#{article_id}
+    </update>
+
+
+
+</mapper>

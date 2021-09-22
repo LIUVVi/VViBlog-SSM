@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vvi.blog.dao.FriendLinkMapper">
+    <select id="selectAll" resultType="com.vvi.blog.bean.FriendLink">
+        select * from friend
+    </select>
+
+    <delete id="deleteFriendLinkById" parameterType="java.lang.Integer">
+        delete from friend where friend_id = #{id}
+    </delete>
+
+    <select id="selectFriendLinkById" parameterType="java.lang.Integer" resultType="com.vvi.blog.bean.FriendLink">
+        select * from friend where friend_id = #{id}
+    </select>
+
+    <update id="updateFriendLink" parameterType="com.vvi.blog.bean.FriendLink">
+        update friend
+          set friend_name=#{friend_name} ,link=#{link}
+        where friend_id = #{friend_id}
+    </update>
+
+    <insert id="insertFriendLink" parameterType="com.vvi.blog.bean.FriendLink">
+        insert into friend
+          (friend_name ,link)
+        values (#{friend_name} ,#{link})
+    </insert>
+
+
+
+
+
+
+</mapper>

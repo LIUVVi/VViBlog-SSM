@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather","Open Sans","Microsoft Jhenghei","Microsoft Yahei",sans-serif;
+}
+
+html{
+    font-size: 16px;
+}
+
+li{
+    list-style: none;
+}
+
+input, textarea, button {
+    -webkit-appearance : none ;
+}
+
+/*字体导入*/
+@font-face{
+    font-family: Selphia;
+    src: url("../fonts/Selphia.otf");
+}
+
+/*谷歌浏览器滚动条*/
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #eee;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.61);
+}
+
+/*=================================================
+头部及内容组件开始
+=================================================*/
+.header{
+    width: 100%;
+    height: 100vh;
+    background: url("http://api.isoyu.com/bing_images.jsp") no-repeat scroll center center / cover; overflow: hidden;
+    text-align: center;
+}
+
+.header-content{
+     position: absolute;
+     top: 34vh;
+     width: 100%;
+     height: auto;
+ }
+
+.header-text{
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 10px;
+    color: white;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.header-text>h1{
+    font-family: 'Selphia', cursive;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.header-text>h2{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.header-text>h3{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+/*=================================================
+头部及内容组件结束
+=================================================*/
+
+
+/*=================================================
+导航组件开始
+=================================================*/
+.show-menu{
+    position: absolute;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 998;
+    right: 10px;
+    display: none;
+    cursor: pointer;
+}
+.show-menu>i{
+    margin-top: 9px;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+/*导航栏*/
+.nav {
+    margin-top: 35px;
+    margin-right: 40px;
+    width: auto;
+    height: 35px;
+    float: right;
+    display: block;
+}
+
+/*导航菜单*/
+.nav>li{
+    margin-left: 15px;
+    width: 80px;
+    height: 35px;
+    float: left;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+}
+
+/*导航链接*/
+.nav a{
+    display: block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    transition: all ease 0.3s;
+    -webkit-text-stroke: 2px #00000020;
+}
+
+/*导航按钮激活*/
+.active{
+    background-color: rgba(255,255,255,0.3);
+}
+
+.nav>li>a:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+
+#myhead{
+    display: block;
+}
+
+.myhead-mobile{
+    display: none;
+}
+
+/*头像*/
+#head{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#head-menu{
+    width: 120px;
+    height: 90px;
+    padding: 10px;
+    margin-left: -30px;
+    background: url(../images/headmenu.png) no-repeat center;
+    background-size: 126px 114px;
+    display: none;
+    position: relative;
+    z-index: 1000;
+}
+
+#head-menu>li{
+    margin-top: 10px;
+    width: 120px;
+    height: 35px;
+
+}
+
+#head-menu>li>a:hover{
+    border-radius: 0;
+    background-color: rgba(255,255,255,0.3);
+}
+/*=================================================
+导航组件结束
+==================================================*/
+
+/*回到顶部*/
+#top{
+    position: fixed;
+    right:0;
+    bottom:66px;
+    z-index: 999;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width:640px) {
+    /*=================================================
+    头部及内容组件开始
+    =================================================*/
+    .header{
+        width: 100%;
+        height: 360px;
+        background: url("http://api.isoyu.com/bing_images.jsp") no-repeat scroll center center / cover; overflow: hidden;
+        text-align: center;
+    }
+
+    .header-content{
+        position: absolute;
+        top: 105px;
+        width: 100%;
+        height: auto;
+    }
+
+    .header-text{
+        position: relative;
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 10px;
+        color: white;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .header-text>h1{
+        font-family: 'Selphia', cursive;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .header-text>h2{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .header-text>h3{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    /*=================================================
+    头部及内容组件结束
+    =================================================*/
+
+    /*=================================================
+    导航组件开始
+    =================================================*/
+    .show-menu{
+        display: block;
+    }
+
+
+    /*导航栏*/
+    .nav {
+        position: relative;
+        margin-top: 0;
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: none;
+        background-color: rgba(40, 36, 36, 0.81);;
+        z-index: 33;
+        display: none;
+    }
+
+    /*导航菜单*/
+    .nav>li{
+        margin-left: 0;
+        width: 100%;
+        height: 60px;
+        float: none;
+        text-align: left;
+        line-height: 60px;
+        color: white;
+    }
+
+    /*导航链接*/
+    .nav a{
+        display: block;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: white;
+        border-radius: 0;
+        transition: all ease 0.3s;
+    }
+
+    /*导航按钮激活*/
+    .active{
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    .nav>li>a:hover{
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    #myhead{
+        display: none;
+    }
+
+    .myhead-mobile{
+        display: block;
+    }
+
+    /*=================================================
+    导航组件结束
+    ==================================================*/
+}
+
+@media only screen and (min-width: 641px) and (max-width:720px) {
+    /*=================================================
+    头部及内容组件开始
+    =================================================*/
+    .header{
+        width: 100%;
+        height: 360px;
+        background: url("http://api.isoyu.com/bing_images.jsp") no-repeat scroll center center / cover; overflow: hidden;
+        text-align: center;
+    }
+
+    .header-content{
+        position: absolute;
+        top: 105px;
+        width: 100%;
+        height: auto;
+    }
+
+    .header-text{
+        position: relative;
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 10px;
+        color: white;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .header-text>h1{
+        font-family: 'Selphia', cursive;
+        font-size: 3.5rem;
+        font-weight: 500;
+    }
+
+    .header-text>h2{
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+
+    .header-text>h3{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    /*=================================================
+    头部及内容组件结束
+    =================================================*/
+
+    /*=================================================
+    导航组件开始
+    =================================================*/
+    .show-menu{
+        display: block;
+    }
+
+
+    /*导航栏*/
+    .nav {
+        position: relative;
+        margin-top: 0;
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: none;
+        background-color: rgba(40, 36, 36, 0.81);;
+        z-index: 33;
+        display: none;
+    }
+
+    /*导航菜单*/
+    .nav>li{
+        margin-left: 0;
+        width: 100%;
+        height: 60px;
+        float: none;
+        text-align: left;
+        line-height: 60px;
+        color: white;
+    }
+
+    /*导航链接*/
+    .nav a{
+        display: block;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: white;
+        border-radius: 0;
+        transition: all ease 0.3s;
+    }
+
+    /*导航按钮激活*/
+    .active{
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    .nav>li>a:hover{
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    #myhead{
+        display: none;
+    }
+
+    .myhead-mobile{
+        display: block;
+    }
+
+    /*=================================================
+    导航组件结束
+    ==================================================*/
+}
+
+@media only screen and (min-width: 721px) and (max-width:1030px) {
+    /*=================================================
+    头部及内容组件开始
+    =================================================*/
+    .header{
+        width: 100%;
+        height: 540px;
+        background: url("http://api.isoyu.com/bing_images.jsp") no-repeat scroll center center / cover; overflow: hidden;
+        text-align: center;
+    }
+
+    .header-content{
+        position: absolute;
+        top: 170px;
+        width: 100%;
+        height: auto;
+    }
+
+    .header-text{
+        position: relative;
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 10px;
+        color: white;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .header-text>h1{
+        font-family: 'Selphia', cursive;
+        font-size: 3.8rem;
+        font-weight: 500;
+    }
+
+    .header-text>h2{
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    .header-text>h3{
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+    /*=================================================
+    头部及内容组件结束
+    =================================================*/
+    .nav{
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width: 1031px){
+    .nav{
+        display: block !important;
+    }
+}
+
